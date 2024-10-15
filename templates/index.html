@@ -1,0 +1,21 @@
+{%extends "layout.html"%}
+
+{%block head%}
+Ecom
+{%endblock%}
+
+{%block body%}
+
+<div class="container">
+  <div class="box box1">
+    <div class="sticky-box">
+      <div class="search-box">
+        <label>Product Name</label>
+        <input type="text" placeholder="Product Name" autocomplete="off">
+      </div>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+  <div class="box box2">{{ data | safe}}</div>
+</div>
+{%endblock%}

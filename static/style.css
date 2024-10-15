@@ -1,0 +1,56 @@
+html,
+body {
+  font-family: "Roboto Mono";
+  font-weight: 200;
+  background-color: #202124;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  /* background-color: darkslategray; */
+  /* width: auto; */
+  /* height: auto; */
+  padding: 20px;
+  margin: 20px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.box1 {
+  background-color: gray;
+  height: auto;
+  width: 200px;
+  margin-right: 15px;
+}
+
+.sticky-box {
+  top: 0px;
+  height: auto;
+  position: sticky;
+}
+
+.box2 {
+  background-color: black;
+  white-space: pre-wrap; /* Để giữ định dạng JSON */
+  color: rgb(192, 61, 13); /* Màu chữ cho nội dung JSON */
+  /* overflow-y: auto; */
+  font-size: small;
+  width: 100%;
+}
+
+.search-box {
+  color: #ffffff;
+}
