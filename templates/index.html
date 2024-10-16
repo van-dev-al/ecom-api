@@ -5,17 +5,32 @@ Ecom
 {%endblock%}
 
 {%block body%}
-
 <div class="container">
-  <div class="box box1">
-    <div class="sticky-box">
-      <div class="search-box">
-        <label>Product Name</label>
-        <input type="text" placeholder="Product Name" autocomplete="off">
+  <div class="box">
+    <form action="{{url_for('api')}}" method="post">
+      <h2>Search Product</h2>
+      <div>
+        <label for="category">Item category</label>
+        <select id="category" name="Category-Options" placeholder="Part Category">
+          <option value="Laptops">Laptop</option>
+          <option value="Mobiles">Mobile</option>
+          <option value="Tablets">Tablet</option>
+        </select>
+      </div>
+      <div>
+        <label>Item Name</label>
+        <input type="text" id="name" name="partname" placeholder="Part Name" autocomplete="off">
       </div>
       <button type="submit">Submit</button>
-    </div>
+    </form>
   </div>
-  <div class="box box2">{{ data | safe}}</div>
+
 </div>
+
+{% if error_message %}
+<script>
+    alert("{{ error_message }}");
+</script>
+{% endif %}
+
 {%endblock%}
